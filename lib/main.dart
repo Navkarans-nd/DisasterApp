@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Login Page',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
       ),
       home: MyHomePage(title: 'Login Page'),
     );
@@ -34,8 +35,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+      title: Text(widget.title),
+      backgroundColor: Colors.blue[900], 
+      centerTitle: true,
+      elevation: 10, 
+      shape: RoundedRectangleBorder( 
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(30),
+        ),
       ),
+    ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
